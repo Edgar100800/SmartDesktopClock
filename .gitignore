@@ -1,0 +1,27 @@
+.venv/
+.platformio/
+backup/
+firmware/*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+
+# PlatformIO / firmware builds
+**/.pio/
+
+# Secretos locales
+**/LocalSecrets.h
+.env
+.env.*
+!.env.example
+
+# Archivos temporales del sistema/editor
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Artefactos locales de CodeGraph
+.codegraph/*
+!.codegraph/.gitignore

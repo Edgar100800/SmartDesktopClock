@@ -1,0 +1,31 @@
+Fase B — Identificación del chip
+Fecha local: 2026-08-11
+esptool: 5.3.1, instalado en .venv
+Puerto: /dev/ttyUSB0
+
+$ .venv/bin/esptool --port /dev/ttyUSB0 chip-id
+esptool v5.3.1
+Serial port /dev/ttyUSB0:
+
+A fatal error occurred: Could not open /dev/ttyUSB0, the port is busy or doesn't exist.
+([Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0')
+
+Segundo intento después de añadir el usuario al grupo uucp:
+
+$ .venv/bin/esptool --port /dev/ttyUSB0 chip-id
+esptool v5.3.1
+Serial port /dev/ttyUSB0:
+Connecting.....
+Detecting chip type... ESP8266
+Connected to ESP8266 on /dev/ttyUSB0:
+Chip type:          ESP8266EX
+Features:           Wi-Fi, 160MHz
+Crystal frequency:  26MHz
+MAC:                48:3f:da:41:5e:30
+Chip ID:            0x00415e30
+Hard resetting via RTS pin...
+
+Resultado FW-02: PASS
+Chip confirmado: ESP8266EX.
+
+No se borró ni escribió la memoria flash durante esta identificación.

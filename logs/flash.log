@@ -1,0 +1,23 @@
+Fases F y G — Borrado y flasheo
+Fecha local: 2026-08-11
+Puerto: /dev/ttyUSB0
+Chip: ESP8266EX
+esptool: 5.3.1
+Firmware: firmware/pixelit_d1_mini.bin
+Firmware SHA256: dbd119743e237732546541981fd038fe57c4531037c469021f95002f9b601284
+
+ERASE
+Comando: .venv/bin/esptool --port /dev/ttyUSB0 erase-flash
+Resultado: Flash memory erased successfully in 10.4 seconds.
+
+WRITE
+Comando: .venv/bin/esptool --port /dev/ttyUSB0 --baud 1000000 write-flash --flash-size 4MB --flash-mode dio 0x0 firmware/pixelit_d1_mini.bin
+Dirección: 0x00000000
+Bytes escritos: 498992
+Bytes comprimidos: 345746
+Duración: 5.1 segundos
+Velocidad: 777.6 kbit/s
+Verificación: Hash of data verified.
+Baud efectivo: 1000000
+
+Estado: PASS

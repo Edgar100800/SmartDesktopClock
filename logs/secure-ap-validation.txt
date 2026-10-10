@@ -1,0 +1,31 @@
+PixelIt secure AP validation
+Date: 2026-08-11
+
+Source base: official PixelIt 2.5.6 tag
+Build environment: ESP8266_d1_mini
+Custom version: 2.5.6-secure-ap
+Change: WiFiManager autoConnect now receives a private WPA2 password.
+Password value: intentionally omitted
+Password storage: pixelit-firmware/include/LocalSecrets.h (Git-ignored)
+
+Build result: PASS
+RAM: 46272 / 81920 bytes (56.5%)
+Flash: 494872 / 1044464 bytes (47.4%)
+Binary size: 499024 bytes
+Binary SHA256: 17f46e6cb0c49e9b18210f878ef25b6aa198ab84d62bb545b78b7bf3e413b06e
+Image validation: ESP8266, 4 MB, DIO, internal checksum valid
+
+Flash result: PASS
+Baud: 1000000
+Written data hash: verified
+Wi-Fi credentials preserved during flash: PASS
+Post-flash version endpoint: 2.5.6-secure-ap
+Post-flash WebUI: HTTP 200
+
+Security test:
+- Wi-Fi credentials reset with POST /api/wifireset.
+- PIXELIT access point visible.
+- Signal: 100%
+- Security advertised: WPA2
+
+SECURE AP: PASS

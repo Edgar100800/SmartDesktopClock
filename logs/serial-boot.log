@@ -1,0 +1,30 @@
+Fase H — Verificación post-flash
+Fecha local: 2026-08-11
+Puerto: /dev/ttyUSB0
+Baud: 115200
+Ventana observada: 45 segundos
+
+Mensajes relevantes:
+
+*WM: Connection timed out
+[1970-01-01T00:00:34] Hotspot: Waiting for WiFi configuration
+*WM: Configuring access point...
+*WM: PIXELIT
+*WM: AP IP address:
+*WM: 192.168.4.1
+*WM: HTTP server started
+
+Diagnóstico:
+- El firmware alcanzó la configuración del punto de acceso.
+- El servidor HTTP inició.
+- No se observó una secuencia repetida de reinicio del bootloader.
+- Los timeouts corresponden al intento de conexión Wi-Fi antes de abrir el AP.
+
+Resultado: BOOT OK
+
+Checkpoint manual 1:
+- PIXELIT visible: PASS
+- Conexión al AP: PASS
+- Portal abre: PASS
+
+FIRMWARE BASIC BOOT = PASS

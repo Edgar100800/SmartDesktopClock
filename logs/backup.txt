@@ -1,0 +1,17 @@
+Fase E — Backup previo
+Fecha local: 2026-08-11
+Puerto: /dev/ttyUSB0
+Chip: ESP8266EX
+Flash detectada: 4 MB
+
+Comando:
+.venv/bin/esptool --port /dev/ttyUSB0 read-flash 0x0 0x400000 backup/wemos-original-flash.bin
+
+Resultado:
+Read 4194304 bytes from 0x00000000 in 387.4 seconds (86.6 kbit/s) to 'backup/wemos-original-flash.bin'.
+Hard resetting via RTS pin...
+
+SHA256:
+90a68dbd7e7cf2920c3332017884d2177abdd162480ab71817e4c4adbabe5a0e  backup/wemos-original-flash.bin
+
+Estado: PASS
